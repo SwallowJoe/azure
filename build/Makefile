@@ -123,6 +123,32 @@ azure/fast:
 	$(MAKE) -f CMakeFiles/azure.dir/build.make CMakeFiles/azure.dir/build
 .PHONY : azure/fast
 
+#=============================================================================
+# Target rules for targets named base
+
+# Build rule for target.
+base: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 base
+.PHONY : base
+
+# fast build rule for target.
+base/fast:
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/build
+.PHONY : base/fast
+
+#=============================================================================
+# Target rules for targets named frame
+
+# Build rule for target.
+frame: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 frame
+.PHONY : frame
+
+# fast build rule for target.
+frame/fast:
+	$(MAKE) -f src/frame/CMakeFiles/frame.dir/build.make src/frame/CMakeFiles/frame.dir/build
+.PHONY : frame/fast
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -213,6 +239,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... azure"
+	@echo "... base"
+	@echo "... frame"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

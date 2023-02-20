@@ -54,24 +54,66 @@ CMAKE_BINARY_DIR = /home/joseph/code/azure/build
 
 # The main recursive "all" target.
 all: CMakeFiles/azure.dir/all
+all: src/base/all
+all: src/frame/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/base/preinstall
+preinstall: src/frame/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/azure.dir/clean
+clean: src/base/clean
+clean: src/frame/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/base
+
+# Recursive "all" directory target.
+src/base/all: src/base/CMakeFiles/base.dir/all
+
+.PHONY : src/base/all
+
+# Recursive "preinstall" directory target.
+src/base/preinstall:
+
+.PHONY : src/base/preinstall
+
+# Recursive "clean" directory target.
+src/base/clean: src/base/CMakeFiles/base.dir/clean
+
+.PHONY : src/base/clean
+
+#=============================================================================
+# Directory level rules for directory src/frame
+
+# Recursive "all" directory target.
+src/frame/all: src/frame/CMakeFiles/frame.dir/all
+
+.PHONY : src/frame/all
+
+# Recursive "preinstall" directory target.
+src/frame/preinstall:
+
+.PHONY : src/frame/preinstall
+
+# Recursive "clean" directory target.
+src/frame/clean: src/frame/CMakeFiles/frame.dir/clean
+
+.PHONY : src/frame/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/azure.dir
 
 # All Build rule for target.
-CMakeFiles/azure.dir/all:
+CMakeFiles/azure.dir/all: src/base/CMakeFiles/base.dir/all
+CMakeFiles/azure.dir/all: src/frame/CMakeFiles/frame.dir/all
 	$(MAKE) -f CMakeFiles/azure.dir/build.make CMakeFiles/azure.dir/depend
 	$(MAKE) -f CMakeFiles/azure.dir/build.make CMakeFiles/azure.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/code/azure/build/CMakeFiles --progress-num=1,2,3,4 "Built target azure"
@@ -79,7 +121,7 @@ CMakeFiles/azure.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/azure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/code/azure/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/code/azure/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/azure.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/code/azure/build/CMakeFiles 0
 .PHONY : CMakeFiles/azure.dir/rule
@@ -93,6 +135,60 @@ azure: CMakeFiles/azure.dir/rule
 CMakeFiles/azure.dir/clean:
 	$(MAKE) -f CMakeFiles/azure.dir/build.make CMakeFiles/azure.dir/clean
 .PHONY : CMakeFiles/azure.dir/clean
+
+#=============================================================================
+# Target rules for target src/base/CMakeFiles/base.dir
+
+# All Build rule for target.
+src/base/CMakeFiles/base.dir/all:
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/depend
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/code/azure/build/CMakeFiles --progress-num=5,6 "Built target base"
+.PHONY : src/base/CMakeFiles/base.dir/all
+
+# Build rule for subdir invocation for target.
+src/base/CMakeFiles/base.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/code/azure/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/base/CMakeFiles/base.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/code/azure/build/CMakeFiles 0
+.PHONY : src/base/CMakeFiles/base.dir/rule
+
+# Convenience name for target.
+base: src/base/CMakeFiles/base.dir/rule
+
+.PHONY : base
+
+# clean rule for target.
+src/base/CMakeFiles/base.dir/clean:
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/clean
+.PHONY : src/base/CMakeFiles/base.dir/clean
+
+#=============================================================================
+# Target rules for target src/frame/CMakeFiles/frame.dir
+
+# All Build rule for target.
+src/frame/CMakeFiles/frame.dir/all:
+	$(MAKE) -f src/frame/CMakeFiles/frame.dir/build.make src/frame/CMakeFiles/frame.dir/depend
+	$(MAKE) -f src/frame/CMakeFiles/frame.dir/build.make src/frame/CMakeFiles/frame.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/code/azure/build/CMakeFiles --progress-num=7,8,9,10 "Built target frame"
+.PHONY : src/frame/CMakeFiles/frame.dir/all
+
+# Build rule for subdir invocation for target.
+src/frame/CMakeFiles/frame.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/code/azure/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 src/frame/CMakeFiles/frame.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/code/azure/build/CMakeFiles 0
+.PHONY : src/frame/CMakeFiles/frame.dir/rule
+
+# Convenience name for target.
+frame: src/frame/CMakeFiles/frame.dir/rule
+
+.PHONY : frame
+
+# clean rule for target.
+src/frame/CMakeFiles/frame.dir/clean:
+	$(MAKE) -f src/frame/CMakeFiles/frame.dir/build.make src/frame/CMakeFiles/frame.dir/clean
+.PHONY : src/frame/CMakeFiles/frame.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -109,6 +109,8 @@ azure: CMakeFiles/azure.dir/src/main.cpp.o
 azure: CMakeFiles/azure.dir/src/test/TestWindow.cpp.o
 azure: CMakeFiles/azure.dir/src/test/LoadShaders.cpp.o
 azure: CMakeFiles/azure.dir/build.make
+azure: src/base/libbase.a
+azure: src/frame/libframe.a
 azure: CMakeFiles/azure.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joseph/code/azure/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable azure"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/azure.dir/link.txt --verbose=$(VERBOSE)

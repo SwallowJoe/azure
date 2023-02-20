@@ -1,0 +1,2 @@
+/usr/bin/ar qc libframe.a  CMakeFiles/frame.dir/Choreographer.cpp.o CMakeFiles/frame.dir/VSyncDispatcher.cpp.o CMakeFiles/frame.dir/VSyncTracker.cpp.o
+/usr/bin/ranlib libframe.a

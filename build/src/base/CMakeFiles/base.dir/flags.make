@@ -6,5 +6,5 @@ CXX_FLAGS =  -pipe -std=c++17 -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/joseph/code/azure/src -I/home/joseph/code/azure/src/base -I/home/joseph/code/azure/src/frame 
+CXX_INCLUDES = -I/home/joseph/code/azure/src -I/home/joseph/code/azure/src/base 
 

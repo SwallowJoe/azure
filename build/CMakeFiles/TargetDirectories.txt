@@ -1,3 +1,9 @@
 /home/joseph/code/azure/build/CMakeFiles/rebuild_cache.dir
 /home/joseph/code/azure/build/CMakeFiles/edit_cache.dir
 /home/joseph/code/azure/build/CMakeFiles/azure.dir
+/home/joseph/code/azure/build/src/base/CMakeFiles/rebuild_cache.dir
+/home/joseph/code/azure/build/src/base/CMakeFiles/edit_cache.dir
+/home/joseph/code/azure/build/src/base/CMakeFiles/base.dir
+/home/joseph/code/azure/build/src/frame/CMakeFiles/rebuild_cache.dir
+/home/joseph/code/azure/build/src/frame/CMakeFiles/edit_cache.dir
+/home/joseph/code/azure/build/src/frame/CMakeFiles/frame.dir

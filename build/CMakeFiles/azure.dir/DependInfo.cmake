@@ -13,10 +13,14 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src"
+  "../src/base"
+  "../src/frame"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/joseph/code/azure/build/src/base/CMakeFiles/base.dir/DependInfo.cmake"
+  "/home/joseph/code/azure/build/src/frame/CMakeFiles/frame.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
