@@ -1,5 +1,5 @@
 #include "TestWindow.h"
-#include "../base/Log.h"
+#include "Log.h"
 #include "LoadShaders.h"
 
 TestWindow::TestWindow(const char* title, int width, int height) : Window(title, width, height) {

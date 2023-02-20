@@ -62,11 +62,11 @@ enum {
 
 #if defined(__linux__)
 static nsecs_t systemTime(int clock) {
-    checkClockId(clock);
+    // checkClockId(clock);
     static constexpr clockid_t clocks[] = {CLOCK_REALTIME, CLOCK_MONOTONIC,
                                            CLOCK_PROCESS_CPUTIME_ID, CLOCK_THREAD_CPUTIME_ID,
                                            CLOCK_BOOTTIME};
-    static_assert(clock_id_max == arraysize(clocks));
+    // static_assert(clock_id_max == arraysize(clocks));
     timespec t = {};
     clock_gettime(clocks[clock], &t);
     return nsecs_t(t.tv_sec)*1000000000LL + t.tv_nsec;

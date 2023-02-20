@@ -20,10 +20,16 @@ message ("GLFW_INCLUDE_DIR=" ${GLFW_INCLUDE_DIR})
 
 include_directories(src)
 
+include_directories(src/base)
+add_subdirectory(src/base)
+
+include_directories(src/frame)
+add_subdirectory(src/frame)
+
 add_executable(${PROJECT_NAME}
         src/main.cpp
         src/test/TestWindow.cpp
         src/test/LoadShaders.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} -lGL -lGLEW -lglfw -lpthread)
+target_link_libraries(${PROJECT_NAME} base frame -lGL -lGLEW -lglfw -lpthread)
