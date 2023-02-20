@@ -1,0 +1,1 @@
+/usr/bin/c++   -pipe -std=c++17 -g   CMakeFiles/azure.dir/src/main.cpp.o CMakeFiles/azure.dir/src/test/TestWindow.cpp.o CMakeFiles/azure.dir/src/test/LoadShaders.cpp.o  -o azure  -lGL -lGLEW -lglfw -lpthread 
