@@ -3,6 +3,7 @@
 
 src/frame/CMakeFiles/frame.dir/Choreographer.cpp.o
  ../src/base/AutoLock.h
+ ../src/base/Log.h
  ../src/base/Time.h
  /home/joseph/code/azure/src/frame/Choreographer.cpp
  /home/joseph/code/azure/src/frame/Choreographer.h

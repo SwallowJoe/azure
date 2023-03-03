@@ -23,11 +23,11 @@ class VSyncDispatcher final {
   CallbackToken registerCallback(Callback);
   void unregisterCallback(CallbackToken);
   nsecs_t now() const;
+  void endDispatch();
 
  private:
   void threadMain(std::unique_lock<std::mutex>& lock);
   void dispatchLocked();
-  void endDispatch();
   void alarmAt(Callback, nsecs_t uptime);
   void alarmCancel();
 

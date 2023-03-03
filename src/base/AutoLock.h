@@ -3,6 +3,7 @@
 #include <mutex>
 #include <thread>
 
+/*
 class Mutex {
  private:
   std::mutex mLock;
@@ -13,16 +14,16 @@ class Mutex {
   inline Mutex() {}
   inline void lock() { mLock.lock(); }
   inline void unlock() { mLock.unlock(); }
-};
+};*/
 
 class AutoLock {
  private:
-  Mutex& mLock;
+  std::mutex& mLock;
   AutoLock(const AutoLock&) = delete;
   AutoLock& operator=(const AutoLock) = delete;
 
  public:
-  inline explicit AutoLock(Mutex& lock) : mLock(lock) { mLock.lock(); }
-  inline explicit AutoLock(Mutex* lock) : mLock(*lock) { mLock.lock(); }
+  inline explicit AutoLock(std::mutex& lock) : mLock(lock) { mLock.lock(); }
+  inline explicit AutoLock(std::mutex* lock) : mLock(*lock) { mLock.lock(); }
   inline ~AutoLock() { mLock.unlock(); }
 };

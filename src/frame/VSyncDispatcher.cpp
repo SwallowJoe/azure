@@ -79,7 +79,7 @@ void VSyncDispatcher::dispatchLocked() {
     it++;
   }
 }
-void VSyncDispatcher::endDispatch() { mDestroy = false; }
+void VSyncDispatcher::endDispatch() { mDestroy = true; }
 void VSyncDispatcher::alarmAt(VSyncDispatcher::Callback, nsecs_t uptime) {}
 void VSyncDispatcher::alarmCancel() {}
 

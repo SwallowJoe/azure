@@ -71,6 +71,11 @@ static nsecs_t systemTime(int clock) {
     clock_gettime(clocks[clock], &t);
     return nsecs_t(t.tv_sec)*1000000000LL + t.tv_nsec;
 }
+
+static nsecs_t now() {
+  return systemTime(SYSTEM_TIME_MONOTONIC);
+}
+
 #else
 static nsecs_t systemTime(int clock = 0) {
     // Clock support varies widely across hosts. Mac OS doesn't support
@@ -79,5 +84,9 @@ static nsecs_t systemTime(int clock = 0) {
     timeval t = {};
     gettimeofday(&t, nullptr);
     return nsecs_t(t.tv_sec)*1000000000LL + nsecs_t(t.tv_usec)*1000LL;
+}
+
+static nsecs_t now() {
+  return systemTime();
 }
 #endif

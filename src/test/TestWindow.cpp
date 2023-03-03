@@ -44,11 +44,28 @@ void TestWindow::init() {
 
 }
 
-void TestWindow::display() {
-    // LOGI("TestWindow display() call");
+void TestWindow::display(int64_t frameId) {
+    LOGI("TestWindow display() call ", frameId);
     static const float black[] = { 0.0f, 0.0f, 0.0f, 0.0f };
+    static const float red[] = { 1.0f, 0.0f, 0.0f, 0.0f };
+    static const float green[] = { 0.0f, 1.0f, 0.0f, 0.0f };
+    static const float blue[] = { 0.0f, 0.0f, 1.0f, 0.0f };
+#ifdef USE_BG_FLASH
+    if (frameId % 4 == 0) {
+        glClearBufferfv(GL_COLOR, 0, black);
+    } else if (frameId % 4 == 1) {
+        glClearBufferfv(GL_COLOR, 0, red);
+    } else if (frameId % 4 == 2) {
+        glClearBufferfv(GL_COLOR, 0, green);
+    } else if (frameId % 4 == 3) {
+        glClearBufferfv(GL_COLOR, 0, blue);
+    } else {
+        glClearBufferfv(GL_COLOR, 0, black);
+    }
+#else
     glClearBufferfv(GL_COLOR, 0, black);
- 
+#endif
+
     glBindVertexArray(VAOs[Triangles]);
     glDrawArrays(GL_TRIANGLES, 0, NumVertices);
  

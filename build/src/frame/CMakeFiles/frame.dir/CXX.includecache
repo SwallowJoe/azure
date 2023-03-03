@@ -12,6 +12,26 @@ mutex
 thread
 -
 
+../src/base/Log.h
+ctime
+-
+chrono
+-
+sys/time.h
+-
+sys/timeb.h
+-
+iostream
+-
+mutex
+-
+sstream
+-
+string
+-
+thread
+-
+
 ../src/base/Time.h
 stdint.h
 -
@@ -21,6 +41,8 @@ sys/time.h
 /home/joseph/code/azure/src/frame/Choreographer.cpp
 Choreographer.h
 /home/joseph/code/azure/src/frame/Choreographer.h
+Log.h
+/home/joseph/code/azure/src/frame/Log.h
 
 /home/joseph/code/azure/src/frame/Choreographer.h
 iostream

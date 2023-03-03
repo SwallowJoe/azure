@@ -9,7 +9,7 @@ class TestWindow : public Window {
 public:
     void earlyInit() override;
     void init() override;
-    void display() override;
+    void display(int64_t frameId) override;
 
     TestWindow(const char* title, int width, int height);
     ~TestWindow();
