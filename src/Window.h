@@ -10,6 +10,8 @@
 #include "Choreographer.h"
 #include "Log.h"
 
+// #define USE_HD_VSYNC
+
 class Window {
 public:
     Window(const char* title, int width, int height)
@@ -52,9 +54,10 @@ private:
 
         while (!glfwWindowShouldClose(window))
         {
+#ifndef USE_HD_VSYNC
             Choreographer::getInstance()->postFrameCallback(frameCallback);
             mCondition.wait(lock);
-        
+#endif
             display(frameId++);
             glfwSwapBuffers(window);
             glfwPollEvents();
@@ -86,6 +89,9 @@ private:
             return -1;
         }
 
+#ifdef USE_HD_VSYNC
+        glfwSwapInterval(1);
+#endif
         init();
         return 0;
     }
